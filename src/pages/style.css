@@ -1,0 +1,102 @@
+/* Login Form Started */
+.login-form{
+    background-color: lightgray;
+    height: 100vh;
+}
+.button button{
+    padding: 10px 32px;
+    color: #fff;
+    background-color: green;
+    font-size: 18px;
+    letter-spacing: 4px;
+}
+.button button:hover{
+    color: #000;
+    background-color: lightgreen;
+}
+/* Login Form Ended */
+
+
+
+/* Register Form Started */
+.register-form{
+    background-color: lightgray;
+    height: 100vh;
+}
+/* Register Form Ended */
+
+
+/* Header Form Started */
+.logo{
+    width: 132px;
+}
+.logo img{
+    width: 100%;
+}
+.links .link:hover{
+border-bottom: 3px solid blue;
+
+}
+.links a{
+    text-decoration: none;
+    color: rgb(20, 20, 37);
+    font-size: 26px;
+    font-weight: 600;
+}
+.links p{
+    font-size: 26px;
+    font-weight: 600;
+    color: rgb(41, 41, 41);
+}
+/* Header Form Ended */
+
+
+/* Single Page Form Started */
+.single{
+    display: flex;
+    gap: 50px;
+}
+.content{
+    flex: 5;
+}
+.content img{
+    width: 60%;
+    height: 300px;
+    object-fit: cover;
+}
+.menu{
+    flex: 2;
+}
+.user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.user img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.edit{
+    display: flex;
+    gap: 5px;
+}
+.edit img{
+    
+}
+/* Single Page Form Ended */
+
+/* Register Form Started */
+
+/* Register Form Ended */
+
+
+/* Footer Form Started */
+ul li{
+    text-decoration: none;
+    list-style: none;
+    font-size: 18px;
+    font-weight: 600;
+}
+/* Footer Form Ended */
