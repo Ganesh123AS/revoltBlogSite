@@ -4,7 +4,7 @@ const postRoutes = require("./routes/postsRouter");
 const cookieParser = require("cookie-parser");
 const multer = require("multer");
 const bodyParser = require('body-parser');
-
+const {pool} = require('./db/db');
 const cors = require("cors");
 
 const app = express();
@@ -28,14 +28,20 @@ const storage = multer.diskStorage({
 
 const upload = multer({ storage });
 
-app.post("/api/upload", upload.single("file"), function (req,res) {
+app.post("/upload", upload.single("file"), function (req,res) {
     const file = req.file;
-    res.status(200).json(file.filename);
+    res.status(200).json(file);
 })
 
-app.use("/api/auth", authRoutes);
-app.use("api/posts", postRoutes);
+app.use(authRoutes);
+app.use(postRoutes);
+
+
+pool.getConnection((err, connection) => {
+    if (err) throw err;
+    console.log('Connected to the MySQL server.');
+})
 
 app.listen(port, "localhost", (req, res) => {
     console.log(`app is listening on port: ${port}`);
-})
+});

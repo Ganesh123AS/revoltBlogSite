@@ -1,74 +1,62 @@
 const { pool } = require("../db/db");
-const mysql = require('mysql2');
 const jwt = require('jsonwebtoken');
 
 
-const getPosts = (req, res) => {
-    try{
-        const q = req.query.category 
-        ? "SELECT * FROM posts WHERE category = ?" 
-        : "SELECT * FROM posts";
 
-        pool.query(q, [req.query.category], (err, data) => {
+const getPosts = (req, res) => {
+        const q =  "SELECT * FROM posts";
+
+        pool.query(q, (err, data) => {
             if(err) return res.status(500).send(err)
 
             return res.status(200).json(data)
-        })
-    }catch(e){
-        console.log(e)
+        });
     }
-};
 
 
 const getPost = (req, res) => {
-    try{
+        console.log("hello i am in get post")
+        // const q = "SELECT * FROM post WHERE id = ?"
         const q = "SELECT p.id, `username`, `title`, `description`, p.img, u.img AS userIMG, `category`, `date` FROM users u JOIN posts p ON u.id = p.uid WHERE p.id = ? ";
     
         pool.query(q, [req.params.id], (err, data) => {
             if(err) return res.status(500).json(err);
-
-            return res.status(200).json(data[0]);
+            
+            return res.status(200).json(data);
         })
-    }catch(e){
-        console.log(e)
-    }
 };
 
 
 const addPost = (req, res) => {
-    try{
-        const token = req.cookies.access_token;
-        if(!token) return res.status(401).json("Not authorized");
+    // console.log(req.cookies)
+        // const token = req.cookie.access_token;
+        
+        // if(!token) return res.status(401).json("Not authorized");
 
-        jwt.verify(token, "jwtkey", (err, userInfo) => {
-            if(err) return res.status(403).json("Token invalid");
+        // jwt.verify(token, "jwtkey", (err, userInfo) => {
+        //  if(err) return res.status(403).json("Token invalid");
 
             const q = "INSERT INTO posts(`title`, `description`, `img`, `category`, `date`, `uid`) VALUES (?)";
-
+           
             const values = [
-                req.body.titles,
-                req.body.description,
-                req.body.img,
-                req.body.category,
-                req.body.date,
-                userInfo.id
+                title = req.body.title,
+                description = req.body.description,
+                img = req.body.img || "",
+                category = req.body.category || "",
+                date = req.body.date,
+                uid = 1,
             ];
 
             pool.query(q, [values], (err, data) => {
                 if (err) return res.status(500).json(err);
-
                 return res.json("post has been created successfully");
             });
-        });
-    }catch(e){
-        console.log(e)
-    }
-};
+        // });
+}
 
 
 
 const deletePost = (req, res) => {
-    try{
         const token = req.cookies.access_token;
 
         if(!token) return res.status(401).json("Not authorized");
@@ -85,9 +73,6 @@ const deletePost = (req, res) => {
                 return res.json("post has been deleted successfully");
             })
         })
-    }catch(e){
-        console.log(e)
-    }
 };
 
 const updatePost = (req, res) => {
@@ -116,10 +101,8 @@ const updatePost = (req, res) => {
     }
 };
 
-module.exports = {
-    getPosts,
-    getPost,
-    addPost,
-    deletePost,
-    updatePost,
-}
+exports.getPosts = getPosts;
+exports.getPost = getPost;
+exports.addPost = addPost;
+exports.deletePost = deletePost;
+exports.updatePost = updatePost;

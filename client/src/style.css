@@ -1,0 +1,303 @@
+/* Start Of Nav Bar Section */
+.container{
+    padding: 0px 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+    background: rgb(182, 237, 255);
+}
+.logo img{
+    width: 120px;
+    height: 100px;
+}
+.links ul{
+    display: flex;
+    gap: 14px;
+}
+.links ul li{
+    list-style: none;
+    text-decoration: none;
+    color: #5a5353;
+   
+}
+.links ul li a{
+    text-decoration: none;
+    color: #5a5353;
+}
+.links h6{
+    font-size: 22px;
+    font-weight: 600;
+}
+.links h6:hover{
+    color: rgb(146, 199, 2);
+    border-bottom: 3px solid red;
+}
+.nav-contact p{
+    font-size: 22px;
+    font-weight: 600;
+}
+.nav-contact p:hover{
+    color: rgb(146, 199, 2);
+    border-bottom: 3px solid red;
+}
+.links span{
+    cursor: pointer;
+}
+/* End Of Nav Bar Section */
+
+/* Start Of Register Section */
+/* End Of Register Section */
+
+/* Start Of Register And Login Section */
+.auth{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #b9e7e7; 
+}
+.auth h1{
+    font-size: 20px;
+    color: teal;
+    margin-bottom: 20px;
+}
+.auth form {
+    display: flex;
+    flex-direction: column;
+    padding: 68px;
+    background-color: white;
+    width: 240px;
+    gap: 20px;
+}
+.auth form input{
+    padding: 12px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+.auth button{
+    padding: 10px;
+    border: none;
+    background-color: teal;
+    cursor: pointer;
+    color: white;
+    font-size: 18px;
+}
+.auth button:hover{
+    background-color: green;
+    color: #fff;
+}
+.auth p{
+    font-size: 12px;
+    color: red;
+    text-align: center;
+}
+.auth span{
+    font-size: 12px;
+    text-align: center;
+}
+/* End Of Register  And Login Section */
+
+
+/* Start Of Register Section */
+.footer-all{
+    display: flex;
+    justify-content: space-evenly;
+    text-align: center;
+    background-color: #b9e7e7;
+}
+.footer-all ul li{
+    list-style: none;
+    text-decoration: none;
+}
+.footer-all h1{
+    color: navy;
+}
+.footer-all p{
+    color: rgb(74, 74, 165);
+}
+/* End Of Register Section */
+
+
+
+.home-img{
+    width: 100%;
+    object-fit: contain;
+    opacity: 0.7;
+    height: 70vh;
+}
+.home-img img{
+    width: 100%;
+    height: 100%;
+}
+
+
+
+
+
+/* Start Of Write Section */
+.add{
+    margin-top: 30px;
+    padding: 0px 100px;
+      display: flex;
+      gap: 20px;
+}
+.content{
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.content input{
+    padding: 10px;
+    border: 1px solid lightgray;
+}
+.editContainer{
+    height: 300px;
+    overflow: scroll;
+    border: 1px solid lightgray;
+}
+.editContainer editor{
+    height: 100%;
+    border: none;
+}
+.menu{
+    flex: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.item{
+    border: 1px solid lightgray;
+    padding: 10px;
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 12px;
+    color: #555;
+}
+.item h1{
+    font-size: 20px;  
+}
+.file{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.buttons:first-child{
+    cursor: pointer;
+    color: teal;
+    background-color: white;
+    border: 1px solid teal;
+    padding: 3px 5px;
+}
+.buttons:last-child{
+    cursor: pointer;
+    color: white;
+    background-color: teal;
+    border: 1px solid teal;
+    padding: 3px 5px;
+  }
+.cat{
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    color: teal; 
+}
+/* End Of Write Section */
+
+/* Start Of Menu Section */
+.single {
+    display: flex;
+    gap: 50px;
+}
+.single .menu{
+    flex: 2;
+    display: flex;
+    font-display: column;
+    gap: 25px;
+}
+.single .menu h1{
+    font-size: 20px;
+    color: #555;
+}
+.single .post{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.single .post img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.post h2{
+    color: #555;
+}
+.single .post button{
+    width: max-content;
+    padding: 7.5px 15px;
+    border: none;
+    cursor: pointer;
+    color: teal;
+    background-color: white;
+    border: 1px solid teal;
+}
+.post button:hover{
+    border: 1px solid white;
+    background-color: #b9e7e7;
+    color: black;
+}
+/* End Of Menu Section */
+
+/* Start Of Single Section */
+.single{
+    display: flex;
+    gap: 50px;
+}
+.content{
+    flex: 5;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+.content img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+.user{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+.user img{
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.user span{
+    font-weight: bold;
+}
+.edit{
+    display: flex;
+    gap: 5px;
+
+}
+.edit img{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+/* End Of Write Section */
+
+
+/* Start Of Write Section */
+/* End Of Write Section */

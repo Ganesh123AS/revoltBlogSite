@@ -1,0 +1,33 @@
+.blog{
+
+}
+.blog-section{
+    border: 1px solid #000000;
+    margin: 80px 30px;
+    padding: 10px 80px;
+    background: rgb(233, 232, 232);
+}
+.blog-title{
+    display: flex;
+    justify-content: space-between;
+}
+.blog-description{
+    display: flex;
+    justify-content: space-between;
+}
+.blog-btn{
+    text-align: center;
+}
+.blog-btn button{
+    padding: 10px 20px;
+    background: rgb(26, 245, 26);
+    border: 1px solid red;
+}
+.blog-btn a{
+    text-decoration: none;
+    color: #000000;
+}
+.blog-btn button:hover{
+    color: aliceblue;
+    background: blue;
+}
